@@ -1,6 +1,6 @@
 ﻿// WEATHER_TEMPLATE.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
-
+#include "XmlService.h"
 #include <iostream>
 #include "JsonService.h"
 int main()
@@ -8,6 +8,11 @@ int main()
     JsonService js;
     Weather w = js.getWeather("weather.json");
     std::cout << w;
+
+    XmlService xs;
+    Weather s = xs.getWeather("weather.xml");
+    cout << s;
+
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
